@@ -1,0 +1,17 @@
+:root {
+    --blue: #b0d5ff;
+    --pink: #ffa1a1;
+}
+
+div[class^="col"] {
+    border: 3px solid var(--blue);
+    border-radius: 20px;
+}
+
+div[class^="row"] {
+    margin: 5px;
+}
+
+div[class^="col"]:nth-child(even) {
+    border-color: var(--pink);
+}
