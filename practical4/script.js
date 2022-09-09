@@ -38,18 +38,13 @@ class FactorialChecker {
 const PigLatinEncrypt = str => {
 	let vowels = "aeiou";
 	vowels = vowels.split("");
-	let newStr = [];
 	str = str.toLowerCase();
 
-	if (vowels.indexOf(str[0]) > -1) {
-		newStr = str + "way";
-		return newStr;
-	} else {
-		let firstMatch = str.match(/[aeiou]/g) || 0;
-		let vowel = str.indexOf(firstMatch[0]);
-		newStr = str.substring(vowel) + str.substring(0, vowel) + "ay";
-		return newStr;
-	}
+	return (vowels.indexOf(str[0]) > -1) 
+	? `${str}way`
+	: (str.match(/[aeiou]/gi) || 0).length > 0
+	? `${str.slice(1)}${str[0]}ay`
+	: `${str}ay`;
 
 }//end PigLatinEncrypt
 
