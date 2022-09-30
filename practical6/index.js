@@ -31,18 +31,18 @@ http.createServer((req, res) => {
                     <th>Event date</th>
                     <th>Event details</th>
                 </tr>
-                ${
-                    events.map(e => `
-                            <tr>
-                                <td>${e.title}</td>
-                                <td>${e.description}</td>
-                                <td>${e.date}</td>
-                                <td>${e.validDate}${e.validTitle}</td>
-                            </tr>
-                        `).join('')
-                }
-            </table>
             `);
+        events.forEach(e => {
+            res.write(`
+                <tr>
+                    <td>${e.title}</td>
+                    <td>${e.description}</td>
+                    <td>${e.date}</td>
+                    <td>${e.validDate}${e.validTitle}</td>
+                </tr>
+            `);
+        });
+        res.write('</table>');
         res.end();
     })
 
