@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Picnic",
+        "description": "Picnic in the park",
+        "date": "2022/09/11"
+    },
+    {
+        "title": "Rock concert",
+        "description": "Rock concert at the football stadium",
+        "date": "2022/09/21"
+    },
+    {
+        "title": "Golf day!",
+        "description": "Golf day at the local golf course",
+        "date": "2022/09/09"
+    },
+    {
+        "title": "Braai in the park",
+        "description": "braai at the community swimming pool",
+        "date": "2022/09/22"
+    },
+    {
+        "title": "Festival",
+        "description": "Summer music festival with a lot of artists performing",
+        "date": "2022/09/14"
+    },
+    {
+        "title": "Quiz night @ Bennies",
+        "description": "Quiz night at Bennie's pub",
+        "date": "2022/09/13"
+    },
+    {
+        "title": "#Fundraiser fun marathon!",
+        "description": "Raising money for a very good cause!",
+        "date": "2022/09/24"
+    }
+]
