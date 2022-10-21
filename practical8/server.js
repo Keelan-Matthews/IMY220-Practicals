@@ -14,10 +14,7 @@ async function getEvents(query, projections) {
 
 const query = {
     "locations.area": "Brooklyn",
-    "locations.date": {
-        $gt: "2022/10/08",
-        $lt: "2022/10/26"
-    }
+    "locations": {$elemMatch: {date: {$gt: "2022/10/08", $lt: "2022/10/26"}}}
 };
 
 const projections = {
