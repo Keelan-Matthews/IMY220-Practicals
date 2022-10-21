@@ -1,0 +1,2 @@
+mongosh "mongodb+srv://dbexample.083t7kn.mongodb.net/myFirstDatabase" --apiVersion 1 --username keelan
+password: myPassword
