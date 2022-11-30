@@ -4,12 +4,16 @@ const client = new MongoClient(uri);
 require("regenerator-runtime/runtime.js");
 
 async function getEvents(query, projections) {
-    await client.connect();
-    const database = client.db('DBExample');
-    const collection = database.collection('events');
-    const cursor = collection.find(query, projections);
-    const results = await cursor.toArray();
-    console.log(results);
+    try {
+        await client.connect();
+        const database = client.db('DBExample');
+        const collection = database.collection('events');
+        const cursor = collection.find(query, projections);
+        const results = await cursor.toArray();
+        console.log(results);
+    } finally {
+        await client.close();
+    }
 }
 
 const query = {

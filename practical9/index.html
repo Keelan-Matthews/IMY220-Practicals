@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Practical 9</title>
+        <style>
+        body { 
+            padding-bottom: 3rem; 
+            font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
+
+        #form { 
+            padding: 0.25rem; position: fixed; 
+            bottom: 5%; 
+            left: 0; 
+            right: 0; 
+            margin: auto;
+            width: 50%;
+            display: flex; 
+            height: 3rem; 
+            box-sizing: border-box; 
+            backdrop-filter: blur(10px); 
+        }
+        #input { 
+            border: none; 
+            padding: 0 1rem; 
+            flex-grow: 1; 
+            border-radius: 2rem; 
+            margin: 0.25rem; 
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+        }
+        #input:focus { 
+            outline: none; 
+        }
+        #form > button { 
+            background: #333; 
+            border: none; 
+            padding: 0 1rem; 
+            margin: 0.25rem; 
+            border-radius: 3px; 
+            outline: none; 
+            color: #fff;
+        }
+
+        #form > button:hover { 
+            cursor: pointer;
+        }
+
+
+        .sentMessage{
+			background-color:#e6fffd;
+			box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+			padding: 10px;
+            margin: 5px;
+            width: 50%;
+            left: 0;
+            border-radius: 15px;
+            float: left;
+        }
+
+        .receiveMessage{
+            background-color:#e6ffe6 ;
+            display: block;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+            padding: 10px;
+            margin: 5px;
+            right: 0;
+            width: 50%;
+            border-radius: 15px;
+            float: right;
+        }       
+        </style>
+    </head>
+    <body>
+        <div id="messages"></div>
+        <form id="form" action="">
+            <input id="input"/><button>Send</button>
+        </form>
+    </body>
+    <script src="/socket.io/socket.io.js"></script>
+</html>
